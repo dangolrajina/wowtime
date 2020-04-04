@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2739.542 2743 255.458 252.955">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffcd05;
+      }
+
+      .cls-2 {
+        fill: #1d2a5a;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: #fff;
+        font-size: 26px;
+        font-family: FuturaBT-Book, Futura Bk BT;
+      }
+
+      .cls-5 {
+        fill: #01245c;
+        font-size: 20px;
+        font-family: SegoeUI, Segoe UI;
+      }
+    </style>
+  </defs>
+  <g id="subscribe" transform="translate(2640.217 2692.457)">
+    <path id="Path_3" data-name="Path 3" class="cls-1" d="M336.276,238.526c-35.875,44.4-187.95,40.362-228.312,0-31.905-31.905,0-180.489,0-180.489H336.276S364.639,203.428,336.276,238.526Z" transform="translate(5.543 27.384)"/>
+    <path id="Path_4" data-name="Path 4" class="cls-2" d="M333.809,112.774c-2.583-16.039-2.434-19.813-4.18-25.036-16.583-49.6-213.661-49.6-229.332.014-1.057,5.078-1.1,6.032-4.575,25.347,6.684,2.965,20.023,7.442,20.023,7.442,10.244,5.2,35.857,16.774,50.676,24.654,3.049,2.15,26.036,11.366,48.163,29.238,22.108-17.882,45.161-27.116,48.209-29.266,14.81-7.884,40.418-19.474,50.658-24.682C313.441,120.487,320.972,117.047,333.809,112.774Z" transform="translate(12.627 0)"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-3" width="226.898" height="52.361" transform="translate(113.506 89.131)"/>
+    <text id="Subscribe-2" data-name="Subscribe" class="cls-4" transform="translate(229.195 114.345)"><tspan x="-54.19" y="0">Subscribe</tspan></text>
+    <line id="Line_1" data-name="Line 1" class="cls-3" x2="20.246" transform="translate(325.607 113.1)"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-3" width="216.425" height="102.274" transform="translate(120.739 186.913)"/>
+    <text id="Subscribe_to_unlock_Live_TV_for_predefined_times" data-name="Subscribe to unlock 
+Live TV for 
+predefined times" class="cls-5" transform="translate(99.783 177.498)"><tspan x="40.514" y="22">Subscribe to unlock </tspan><tspan x="80.397" y="54">Live TV for </tspan><tspan x="52.482" y="86">predefined times</tspan></text>
+  </g>
+</svg>
