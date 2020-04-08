@@ -355,57 +355,14 @@
                 <!-- <a href="" class="view_channels">View Channel List</a> -->
             </div>
             <div class="channel_list pull-right">
+                
+        @foreach(\App\Channel::all() as $channel)
+    
+                
                 <div>
-                    <img src="assets/uploads/2017/11/590.png" alt="">
+                    <img src="/storage/{{ $channel->image }}" alt="">
                 </div>
-                <div>
-                    <img src="assets/uploads/2017/11/aveneus.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/indigenous.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/kantipur_tv.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/abc.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/ap1_HD.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/sony.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/sony_bbc_earth.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/zee_cinema_HD.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/pictures.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/zee_tv_HD.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/aajtak.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/sony_pix.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/dw_black.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/sony_six.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/sony_ten_1.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/uploads/2017/11/sony_ten_2.png" alt="">
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="streaming_easy">

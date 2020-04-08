@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Channel;
 
 class HomeController extends Controller
 {
  
     public function index()
 	{
-		return view ('welcome');
+		$channels = Channel::latest()->get();
+		return view ('welcome',compact('channels'));
     }
 
      
