@@ -32,3 +32,15 @@ Route::get('/career','CareerController@show');
 Route::get('/help-center','HelpCenterController@show');
 Route::get('/tos','TosController@show');
 Route::get('/privacy-policy','PrivacyController@show');
+
+Route::get('/admin/index','IndexController@show');
+Route::get('/admin/channel','Admin\ChannelsController@index');
+Route::get('/admin/channel/create','Admin\ChannelsController@create');
+Route::post('/admin/channel/create','Admin\ChannelsController@store');
+Route::get('/admin/channel/edit/{channel}','Admin\ChannelsController@edit');
+Route::patch('/admin/channel/edit/{channel}','Admin\ChannelsController@update');
+Route::delete('/admin/channel/delete/{channel}','Admin\ChannelsController@delete');
+
+Route::get('/admin/packages','Admin\AdminPackageController@index');
+
+

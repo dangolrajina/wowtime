@@ -9,4 +9,5 @@ class PackagesController extends Controller
     public function show()
 	{
 		return view ('packages');
-    }}
+    }
+}
