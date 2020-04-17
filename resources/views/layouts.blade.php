@@ -31,7 +31,7 @@
     <meta name="msapplication-TileImage" content="assets/img/favicons//ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:700|Quicksand|Questrial|Oswald|Montserrat|Raleway|Work+Sans"
-        rel="stylesheet">
+    rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset("assets/css/bootstrap.min.css")}}">
@@ -40,40 +40,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .navbar-inverse .navbar-nav>li.current_page_items>a {
-    color: #fc0;
-    font-size: 17px;
-    transition: color 100ms ease-in;
-}
+            color: #fc0;
+            font-size: 17px;
+            transition: color 100ms ease-in;
+        }
     </style>
     <script src="{{ asset("assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js")}}"></script>
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '617336782056768'); 
-    fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" src="https://www.facebook.com/tr?id=617336782056768&ev=PageView
-    &noscript=1" />
-    </noscript>
-    <!-- End Facebook Pixel Code -->
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '617336782056768'); 
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" src="https://www.facebook.com/tr?id=617336782056768&ev=PageView
+            &noscript=1" />
+        </noscript>
+        <!-- End Facebook Pixel Code -->
 
-</head>
+    </head>
 
-<body class="home">
+    <body class="home">
 
-    <header class="header">
-        <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom" role="navigation">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+        <header class="header">
+            <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
                         aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -84,7 +84,7 @@
                         <img src="{{ asset('assets/img/logo.svg')}}" alt="" style="height: 67px;">
                     </a>
                 </div>
-                <ul class="nav navbar-nav pull-right pjax_nav">
+                <ul class="nav navbar-nav pull-right pjax_nav" style="margin-right: 73px;">
                     <li class="nav-item {{Request::path() == 'welcome' ? 'current_page_items' : ''}}">
                         <a class="nav-link" href="/welcome">Home</a>
                     </li>
@@ -100,11 +100,38 @@
                     <li class="nav-item {{Request::path() == 'contact-us' ? 'current_page_items' : ''}}">
                         <a class="nav-link" href="/contact-us">Contact Us</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="http://wowtime.net/user/">Login</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Login<span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="/login">User Login</a></li>
+                            <li><a href="/admin/login">Admin Login</a></li>
+
+                        </ul>
+                        
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Register<span class="caret"></span></a>
+                        
+                        <ul class="dropdown-menu">
+                           <li><a href="/registration">User Register</a></li>
+                           <li><a href="/admin/registration">Admin Register</a></li>
+                       </ul>
+                       
+                   </li>
+               </ul>
+           </div>
+           <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
                 </ul>
             </div>
+
         </nav>
         <div class="navbar_mobile navbar navbar-inverse navbar-fixed-top navbar-custom" style="min-height:75px;padding:12px 0 15px 0;">
             <div class="container-fluid">
@@ -143,7 +170,7 @@
                                 <a class="nav-link" href="/contact-us">Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="http://wowtime.net/user/">Login</a>
+                                <a class="nav-link" href="/login">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -152,17 +179,17 @@
         </div>
     </header>
 
-@yield('content')
+    @yield('content')
 
     <footer class="">
         <style>
-        
-li.current_page_items>a {
-    color: #fc0;
-    font-size: 17px;
-    transition: color 100ms ease-in;
-}
-    </style>
+
+            li.current_page_items>a {
+                color: #fc0;
+                font-size: 17px;
+                transition: color 100ms ease-in;
+            }
+        </style>
         <div class="container-fluid">
             <div class="row footer_menus">
                 <div class="col-md-4 col-xs-6">
@@ -270,60 +297,60 @@ li.current_page_items>a {
                     <div class="row ">
                         <div class="col-md-12">
                             <div class="fb-like pull-left desktop_hide fb_iframe_widget" data-href="https://www.facebook.com/wowtimeapp/"
-                                data-layout="button" data-action="like" data-size="large" data-show-faces="true"
-                                data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fwowtimeapp%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=large">
-                                <span style="vertical-align: bottom; width: 122px; height: 28px;">
-                                    <iframe name="f148586db447488" width="1000px" height="1000px" frameborder="0"
-                                        allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
-                                        title="fb:like Facebook Social Plugin" src="https://web.facebook.com/v2.10/plugins/like.php?action=like&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FQX17B8fU-Vm.js%3Fversion%3D42%23cb%3Df28ce470c1e2668%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%252Ff32579433def3a4%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fwowtimeapp%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=large"
-                                        style="border: none; visibility: visible; width: 122px; height: 28px;" class=""></iframe>
-                                </span>
-                            </div>
+                            data-layout="button" data-action="like" data-size="large" data-show-faces="true"
+                            data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fwowtimeapp%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=large">
+                            <span style="vertical-align: bottom; width: 122px; height: 28px;">
+                                <iframe name="f148586db447488" width="1000px" height="1000px" frameborder="0"
+                                allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                                title="fb:like Facebook Social Plugin" src="https://web.facebook.com/v2.10/plugins/like.php?action=like&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FQX17B8fU-Vm.js%3Fversion%3D42%23cb%3Df28ce470c1e2668%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%252Ff32579433def3a4%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fwowtimeapp%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=large"
+                                style="border: none; visibility: visible; width: 122px; height: 28px;" class=""></iframe>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-9">
-                    <p class="copyright">Copyright © 2017
-                        <a href="index.html">WOWTIME</a>. All rights reserved.</p>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-9">
+                <p class="copyright">Copyright © 2017
+                    <a href="index.html">WOWTIME</a>. All rights reserved.</p>
                 </div>
                 <div class="col-md-3 footer_bottom_fb_like">
                     <div class="fb-like text-center fb_iframe_widget" data-href="https://www.facebook.com/wowtimeapp/"
-                        data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"
-                        fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fwowtimeapp%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=large">
-                        <span style="vertical-align: bottom; width: 122px; height: 28px;">
-                            <iframe name="f374bb81dfca4c8" width="1000px" height="1000px" frameborder="0"
-                                allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
-                                title="fb:like Facebook Social Plugin" src="https://web.facebook.com/v2.10/plugins/like.php?action=like&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FQX17B8fU-Vm.js%3Fversion%3D42%23cb%3Df1dbfd41d2be924%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%252Ff32579433def3a4%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fwowtimeapp%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=large"
-                                style="border: none; visibility: visible; width: 122px; height: 28px;" class=""></iframe>
-                        </span>
-                    </div>
+                    data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"
+                    fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fwowtimeapp%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=large">
+                    <span style="vertical-align: bottom; width: 122px; height: 28px;">
+                        <iframe name="f374bb81dfca4c8" width="1000px" height="1000px" frameborder="0"
+                        allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                        title="fb:like Facebook Social Plugin" src="https://web.facebook.com/v2.10/plugins/like.php?action=like&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FQX17B8fU-Vm.js%3Fversion%3D42%23cb%3Df1dbfd41d2be924%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%252Ff32579433def3a4%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fwowtimeapp%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=large"
+                        style="border: none; visibility: visible; width: 122px; height: 28px;" class=""></iframe>
+                    </span>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    
-    <script src="{{ asset("assets/js/vendor/jquery-1.11.2.min.js")}}"></script>
-    <script async="async" src="{{ asset("assets/js/vendor/bootstrap.min.js")}}"></script>
-    <script async="async" src="{{ asset("assets/js/jquery.popup.min.js")}}"></script>
-    <script async="async" src="{{ asset("assets/js/swiper.js")}}"></script>
-    <script src="{{ asset("assets/js/main.js")}}"></script>
-    <script>
-        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-        if (/android/i.test(userAgent)) {
+<script src="{{ asset("assets/js/vendor/jquery-1.11.2.min.js")}}"></script>
+<script async="async" src="{{ asset("assets/js/vendor/bootstrap.min.js")}}"></script>
+<script async="async" src="{{ asset("assets/js/jquery.popup.min.js")}}"></script>
+<script async="async" src="{{ asset("assets/js/swiper.js")}}"></script>
+<script src="{{ asset("assets/js/main.js")}}"></script>
+<script>
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-            $('.ios_downlod').hide();
-            $('.download_info').append('Available for iOS also');
-        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    if (/android/i.test(userAgent)) {
 
-            $('.android_downlod').hide();
-            $('.download_info').append('Available for Android  also');
-        } else {}
-    </script>
+        $('.ios_downlod').hide();
+        $('.download_info').append('Available for iOS also');
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+
+        $('.android_downlod').hide();
+        $('.download_info').append('Available for Android  also');
+    } else {}
+</script>
 </body>
 
 </html>

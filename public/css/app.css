@@ -357,3 +357,8 @@
     background-size: cover;
     height:100vh;
 }
+
+.content{
+	justify-content: center;
+	
+}

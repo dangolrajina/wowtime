@@ -16,9 +16,9 @@
    justify-content: center;
    align-items: center;
    margin: 0 auto;">
-  
-    <h1 class="heading">User Login</h1>
-    <form method="post" action="/login" >
+   <h1 class="heading" style="color: white">Admin Login</h1>
+   <div  class="flex" style="justify-content: center;">
+    <form method="post" action="/admin/login" >
       @csrf
       <div class="">
         <i class="fa fa-user"></i>
@@ -28,18 +28,17 @@
         <i class="fa fa-lock"></i>
         <input class="input" type="password" name="password"placeholder="Password" style="    padding: 0px 5px;">
       </div>
-       <div style="padding: 20px 63px;">
+      <div style="padding: 20px 63px;">
        <button type="submit" class="button" style="border-radius: 18px;
-    padding: 10px;
-    width: 78px;
-    border: 1px solid blue;">Login</button>
+       padding: 10px;
+       width: 78px;
+       border: 1px solid blue;">Login</button>
      </div>
-    </form>
-  </div>
+   </form>
+ </div>
 </div>
 </div>
 </main>   
 </body>
 </html>
-
 

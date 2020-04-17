@@ -73,13 +73,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/welcome">
                         <img src="assets/img/logo.svg" alt="" style="height: 67px;">
                     </a>
                 </div>
-                <ul class="nav navbar-nav pull-right pjax_nav">
+                <ul class="nav navbar-nav pull-right pjax_nav" style="margin-right: 73px;">
                     <li class="nav-item">
-                        <a class="nav-link" href="/index">Home</a>
+                        <a class="nav-link" href="/welcome">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/features">Features</a>
@@ -94,8 +94,23 @@
                         <a class="nav-link" href="/contact-us">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://wowtime.net/user">Login</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Login<span class="caret"></span></a>
+                        
+                        <ul class="dropdown-menu">
+                            <li><a href="/login">User Login</a></li>
+                            <li><a href="/admin/login">Admin Login</a></li>
+                            
+                        </ul>
                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Register<span class="caret"></span></a>
+                        
+                        <ul class="dropdown-menu">
+                         <li><a href="/registration">User Register</a></li>
+                         <li><a href="/admin/registration">Admin Register</a></li>
+                     </ul>
+                     
+                 </li>
                 </ul>
             </div>
         </nav>
