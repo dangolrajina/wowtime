@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
+	public function _construct(){
+		$this->middleware('auth:admin');
+	} 
       public function show()
 	{
+		
 		return view ('admin.index');
     }
     

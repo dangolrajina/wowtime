@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
+    public function _construct()
+    {
+        $this->middleware('auth:admin', ['except' => ['logout', 'index']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -27,69 +31,22 @@ class LoginController extends Controller
       
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
 
-            return redirect()->route('admin.adminhome');
+        return redirect()->route('admin.index');
          } else {
            
             return redirect()->back();
         }
     }
-       
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\r  $r
-     * @return \Illuminate\Http\Response
-     */
-    public function show(r $r)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\r  $r
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(r $r)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\r  $r
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, r $r)
-    {
-        //
-    }
-
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\r  $r
+     * @param  \App\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function destroy(r $r)
-   
-   
+    public function destroy(Request $request)
     {
-        Auth('admins')->logout();
-        $request->session()->flush();
-        return redirect('login');
+        Auth::guard('admin')->logout();
+        return redirect('/admin/login');
     }     
     
 }

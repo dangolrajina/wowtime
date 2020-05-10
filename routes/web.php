@@ -25,6 +25,8 @@ Route::post('/login','LoginController@store');
 Route::post('/logout','LoginController@destroy');
 
 Route::get('/welcome','HomeController@index');
+Route::get('/home','HomeController@show');
+
 
 
 Route::get('/features','FeatureController@show');
@@ -39,13 +41,12 @@ Route::get('/privacy-policy','PrivacyController@show');
 
 
 Route::prefix('admin')->group(function () {
-Route::get('/home','HomeController@show')->name('adminhome');
 Route::get('/registration','Admin\RegistrationController@create')->name('registration');
 Route::post('/registration','Admin\RegistrationController@store')->name('registration.submit');
 Route::get('/login','Admin\loginController@index')->name('adminlogin');
 Route::post('/login','Admin\loginController@store');
-Route::post('/adminlogout','Admin\loginController@destroy');
-Route::get('/index','IndexController@show');
+Route::post('/adminlogout','Admin\loginController@destroy')->name('admin.logout');
+Route::get('/index','IndexController@show')->name('admin.index')->middleware('auth:admin');
 Route::get('/channel','Admin\ChannelsController@index');
 Route::get('/channel/create','Admin\ChannelsController@create');
 Route::post('/channel/create','Admin\ChannelsController@store');

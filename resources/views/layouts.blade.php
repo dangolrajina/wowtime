@@ -44,6 +44,10 @@
             font-size: 17px;
             transition: color 100ms ease-in;
         }
+        .navbar-inverse .navbar-nav>li>a {
+    color: #34334d;
+   
+}
     </style>
     <script src="{{ asset("assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js")}}"></script>
     <!-- Facebook Pixel Code -->
@@ -70,7 +74,7 @@
     <body class="home">
 
         <header class="header">
-            <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom" role="navigation">
+            <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom" role="navigation" >
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -122,15 +126,7 @@
                    </li>
                </ul>
            </div>
-           <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                  <span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                </ul>
-            </div>
+           
 
         </nav>
         <div class="navbar_mobile navbar navbar-inverse navbar-fixed-top navbar-custom" style="min-height:75px;padding:12px 0 15px 0;">
